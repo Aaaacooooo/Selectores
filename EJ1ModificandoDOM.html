@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Cambiando el tamaño del texto</title>
+</head>
+
+<body>
+   <p id="parrafo1">Texto a agrandar, reducir o dejar de forma original<strong> id = parrafo1</strong></p>
+   <p id="parrafo2">Este es el segundo párrafo <strong> id = parrafo2</strong></p>
+
+   <!-- Cuadro de texto -->
+   <input type="text" name="parrafo" id="parrafo">
+
+   <!-- botones -->
+   <button type="submit"
+      onclick="modificarTexto('aumentar', 0.05, document.getElementById('parrafo').value);">Agrandar</button>
+   <button type="submit"
+      onclick="modificarTexto('reducir', 0.05, document.getElementById('parrafo').value);">Reducir</button>
+   <button type="submit"
+      onclick="modificarTexto('original', 0.05, document.getElementById('parrafo').value);">Original</button>
+
+   <button type="submit" onclick="CrearParrafo();">Añadir</button>
+
+   <!-- Nuevos campos para modificar estilos -->
+   <label for="tamanio">Tamaño: </label>
+   <input type="text" id="tamanio" placeholder="Ej: 16px">
+   <label for="color">Color: </label>
+   <input type="text" id="color" placeholder="Ej: blue">
+   <label for="fuente">Fuente: </label>
+   <input type="text" id="fuente" placeholder="Ej: Arial">
+   <button onclick="aplicarEstilos()">Aplicar Estilos</button>
+
+   <script src="changeSize.js"></script>
+</body>
+
+</html>
